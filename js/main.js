@@ -92,32 +92,70 @@ $('#myCarousel-comment').owlCarousel({
 	}
 });
 
-var sitePlusMinus = function() {
-	$('#btn-minus').on('click', function(e){
-		e.preventDefault();
-		if ( $(this).closest('.input-group').find('.form-control').val() != 0  ) {
-			$(this).closest('.input-group').find('.form-control').val(parseInt($(this).closest('.input-group').find('.form-control').val()) - 1);
-		} else {
-			$(this).closest('.input-group').find('.form-control').val(parseInt(0));
-		}
+function setActiveMenu(){
+
+var path= window.location.pathname;
+if(window.location.pathname.startsWith('/'))
+path=path.substr(1);
+$('.menu-site > li').removeClass('active');
+$(`a[href='${path}']`).closest('li').addClass('active');
+
+};
+setActiveMenu();
+
+
+var sitePlusMinus = function(){
+
+	$('#btn-minus').click( function(e){
+      e.preventDefault();
+		var inputArea=$(this).closest('.input-group').find('.form-control');
+		var value = $(inputArea).val();
+		value--;
+		$(inputArea).val(value);
+	
 	});
-	$('#btn-plus').on('click', function(e){
+	
+	$('#btn-plus').click( function(e){
 		e.preventDefault();
-		$(this).closest('.input-group').find('.form-control').val(parseInt($(this).closest('.input-group').find('.form-control').val()) + 1);
+	
+		var inputArea=$(this).closest('.input-group').find('.form-control')
+		var value = $(inputArea).val();
+		value++;
+		$(inputArea).val(value);
+	
 	});
+
+
 };
 sitePlusMinus();
+
+
+// var sitePlusMinus = function() {
+// 	$('#btn-minus').on('click', function(e){
+// 		e.preventDefault();
+// 		if ( $(this).closest('.input-group').find('.form-control').val() != 0  ) {
+// 			$(this).closest('.input-group').find('.form-control').val(parseInt($(this).closest('.input-group').find('.form-control').val()) - 1);
+// 		} else {
+// 			$(this).closest('.input-group').find('.form-control').val(parseInt(0));
+// 		}
+// 	});
+// 	$('#btn-plus').on('click', function(e){
+// 		e.preventDefault();
+// 		$(this).closest('.input-group').find('.form-control').val(parseInt($(this).closest('.input-group').find('.form-control').val()) + 1);
+// 	});
+// };
+// sitePlusMinus();
 
 
 		
 
 
 $("#c_create-account").change(function()
-{
+{  
   if ($(this).is(':checked')) {
 	 
 	 $('#createAccount').addClass('show');
-	 $('.show').css({transition:'0.5s'});
+	
 
   }
   else{

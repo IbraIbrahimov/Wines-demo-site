@@ -481,11 +481,9 @@ body {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  
 }
-.hero-2 background-image{
+.hero-2 background-image {
   width: 100%;
-
 }
 .hero-2:before {
   content: "";
@@ -710,7 +708,7 @@ body {
   margin-bottom: 0;
 }
 
-.section-about-img{
+.section-about-img {
   padding-top: 20px;
   padding-bottom: 20px;
 }
@@ -799,12 +797,13 @@ body {
   border-top: 1px solid #930077 !important;
 }
 
-/* .form-control{
-  padding-left: 20px;
-  padding-right: 20px;
+.form-control {
+  padding: 0;
+  /* padding-left: 20px;
+  padding-right: 20px; */
   background: #fff;
-  
-} */
+  margin: 0 !important;
+}
 
 .form-control:hover,
 .form-control:focus,
@@ -954,6 +953,10 @@ body {
   }
 }
 
+.owl-slide-3 .owl-dots .owl-dot.active>span {
+  background: #fff;
+}
+
 /* Checkout.HTML */
 
 .section-checkout {
@@ -1023,26 +1026,26 @@ body {
   border: none;
   border-bottom: 1px solid #ccc;
 }
-.top-search-form .btn{
-border-color: #000;
-padding: 6px 20px;
-border-radius: 20px;
-background: #000;
-margin: 0!important;
+.top-search-form .btn {
+  border-color: #000;
+  padding: 6px 20px;
+  border-radius: 20px;
+  background: #000;
+  margin: 0 !important;
 }
-.top-search-form .btn:hover{
+.top-search-form .btn:hover {
   box-shadow: none;
 }
-.top-search-form .btn span{
+.top-search-form .btn span {
   color: #fff;
   font-size: 14px;
 }
-.meranda-site-navbar{
+.meranda-site-navbar {
   margin-bottom: 0px;
   z-index: 1999;
   width: 100%;
   background: #fff;
-  
+
   font-weight: bold;
   border-bottom: 1px solid #efefef;
 }
@@ -1076,27 +1079,27 @@ margin: 0!important;
   position: relative;
 }
 
-.meranda-site-section{
+.meranda-site-section {
   padding: 2.5em;
 }
 
-.avatar-img{
+.avatar-img {
   flex: 0 0 40px;
 }
 
-.avatar-img img{
+.avatar-img img {
   max-width: 100%;
   border-radius: 50%;
 }
-.post-meta{
-  font-size: .8rem;
+.post-meta {
+  font-size: 0.8rem;
 }
 
-.post-meta a{
+.post-meta a {
   color: #000;
 }
 
-.tags a{
+.tags a {
   text-decoration: none;
   color: #930077;
   font-size: 13px;
