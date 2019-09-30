@@ -517,6 +517,10 @@ body {
   font-weight: 900;
   text-transform: uppercase;
 }
+@media (max-width: 991.98px){
+.hero-2 h1 {
+    font-size: 2rem;
+}}
 
 /* section 3 */
 
