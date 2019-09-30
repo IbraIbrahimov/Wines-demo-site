@@ -1,5 +1,13 @@
 $(document).ready(function(){
 
+var browserWindow = $(window);
+
+	browserWindow.on('load', function () {
+        $('#loader').fadeOut('slow', function () {
+            $(this).remove();
+        });
+    });
+
 $('.burger-menu').on('click', function(){
 
 $('#p311-nav').addClass("show");
@@ -176,7 +184,14 @@ $("#c_ship-address").change(function()
   }
 });
 
-
+$.validate({
+	lang: 'en',
+	modules : 'location',
+	onModulesLoaded : function() {
+	  $('input[name="country"]').suggestCountry();
+	 
+	}
+});
 
 
 });
